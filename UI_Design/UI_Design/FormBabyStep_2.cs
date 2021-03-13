@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace UI_Design
 {
-    public partial class FormSettings : Form
+    public partial class FormBabyStep_2 : Form
     {
-        public FormSettings()
+        public FormBabyStep_2()
         {
             InitializeComponent();
         }

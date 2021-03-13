@@ -21,8 +21,8 @@ namespace UI_Design
         {
             InitializeComponent();
             child = _child;
-            StylesService.SetEnabledPropDateTP(dtpMeeting, false);
-            StylesService.SetEnabledPropDateTP(dtpNextMeeting, false);
+            StylesService.SetEnabledPropDateTP(dtpMeeting, false, false);
+            StylesService.SetEnabledPropDateTP(dtpNextMeeting, false, true);
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace UI_Design
 
         private void BtnAddHealth_Click(object sender, EventArgs e)
         {
-            if (Validation.VerifyAddHealth(txtLastName.Text, txtFirstName.Text, txtFatherName.Text, txtProff.Text))
+            if (ValidateService.VerifyAddHealth(txtLastName.Text, txtFirstName.Text, txtFatherName.Text, txtProff.Text))
             {
                 HealthRepos.AddData(child.FirstName, txtLastName.Text, txtFirstName.Text, txtFatherName.Text, txtProff.Text, dtpMeeting.Value, dtpNextMeeting.Value, tempImg);
                 DialogResult = DialogResult.OK;
@@ -65,6 +65,16 @@ namespace UI_Design
         {
             if (e.Button != MouseButtons.Left) MouseHook = e.Location;
             Location = new Point((Size)Location - (Size)MouseHook + (Size)e.Location);
+        }
+
+        private void DtpMeeting_ValueChanged(object sender, EventArgs e)
+        {
+            txtDate.Text = dtpMeeting.Value.ToShortDateString().ToString();
+        }
+
+        private void DtpNextMeeting_ValueChanged(object sender, EventArgs e)
+        {
+            txtDateNext.Text = dtpNextMeeting.Value.ToShortDateString().ToString();
         }
     }
 }

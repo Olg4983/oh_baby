@@ -91,7 +91,6 @@ namespace UI_Design
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(213, 28);
             this.txtFirstName.TabIndex = 30;
-            this.txtFirstName.Text = "Иван";
             // 
             // txtLastName
             // 
@@ -102,7 +101,6 @@ namespace UI_Design
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(213, 28);
             this.txtLastName.TabIndex = 29;
-            this.txtLastName.Text = "Иванов";
             // 
             // panel1
             // 
@@ -252,7 +250,6 @@ namespace UI_Design
             this.txtDtp.ReadOnly = true;
             this.txtDtp.Size = new System.Drawing.Size(199, 28);
             this.txtDtp.TabIndex = 40;
-            this.txtDtp.Text = "Иванов";
             // 
             // FormAddChild
             // 

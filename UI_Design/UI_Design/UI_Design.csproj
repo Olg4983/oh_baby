@@ -35,6 +35,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2363103-baby-boy-girl-kid-toy_85451.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -50,9 +53,6 @@
     </Reference>
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
-    </Reference>
-    <Reference Include="MoreLinq, Version=3.3.2.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
-      <HintPath>..\packages\morelinq.3.3.2\lib\net451\MoreLinq.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -88,6 +88,18 @@
     <Compile Include="FormAddHealth.Designer.cs">
       <DependentUpon>FormAddHealth.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormBabyStep_1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBabyStep_1.Designer.cs">
+      <DependentUpon>FormBabyStep_1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBabyStep_2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBabyStep_2.Designer.cs">
+      <DependentUpon>FormBabyStep_2.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDocuments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +118,7 @@
     <Compile Include="FormViewImage.Designer.cs">
       <DependentUpon>FormViewImage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\GrowthRepos.cs" />
     <Compile Include="Repositories\HealthRepos.cs" />
     <Compile Include="Models\Health.cs" />
     <Compile Include="FormGrowth.cs">
@@ -113,12 +126,6 @@
     </Compile>
     <Compile Include="FormGrowth.Designer.cs">
       <DependentUpon>FormGrowth.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormSettings.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormSettings.Designer.cs">
-      <DependentUpon>FormSettings.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -177,6 +184,12 @@
     <EmbeddedResource Include="FormAddHealth.resx">
       <DependentUpon>FormAddHealth.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormBabyStep_1.resx">
+      <DependentUpon>FormBabyStep_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBabyStep_2.resx">
+      <DependentUpon>FormBabyStep_2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDocuments.resx">
       <DependentUpon>FormDocuments.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,9 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMessage.resx">
       <DependentUpon>FormMessage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormSettings.resx">
-      <DependentUpon>FormSettings.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormViewImage.resx">
       <DependentUpon>FormViewImage.cs</DependentUpon>
@@ -332,8 +342,14 @@
     <None Include="Resources\notepad_50px.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="2363103-baby-boy-girl-kid-toy_85451.ico" />
     <Content Include="Properties\dell.png" />
     <Content Include="Properties\noImg.png" />
+    <None Include="Resources\baby_step2_2.png" />
+    <None Include="Resources\baby_step1_1.png" />
+    <None Include="Resources\baby_step1_.png" />
+    <None Include="Resources\2363103-baby-boy-girl-kid-toy_85451.ico" />
+    <None Include="Resources\minimize.png" />
     <None Include="Resources\close.png" />
     <None Include="Resources\minus.png" />
     <None Include="Resources\father_50px.png" />
@@ -352,6 +368,9 @@
     <None Include="Resources\double_left_50px21.png" />
     <None Include="Resources\noImg1.png" />
     <None Include="Resources\dell1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

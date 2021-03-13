@@ -30,8 +30,9 @@ namespace UI_Design
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BtnSettings = new System.Windows.Forms.Button();
+            this.btnMinimize = new System.Windows.Forms.Button();
             this.BtnExit = new System.Windows.Forms.Button();
             this.BtnGrowth = new System.Windows.Forms.Button();
             this.pnlNav = new System.Windows.Forms.Panel();
@@ -56,7 +57,7 @@ namespace UI_Design
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(30)))), ((int)(((byte)(54)))));
-            this.panel1.Controls.Add(this.BtnSettings);
+            this.panel1.Controls.Add(this.btnMinimize);
             this.panel1.Controls.Add(this.BtnExit);
             this.panel1.Controls.Add(this.BtnGrowth);
             this.panel1.Controls.Add(this.pnlNav);
@@ -71,25 +72,25 @@ namespace UI_Design
             this.panel1.Size = new System.Drawing.Size(218, 650);
             this.panel1.TabIndex = 0;
             // 
-            // BtnSettings
+            // btnMinimize
             // 
-            this.BtnSettings.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
-            this.BtnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.BtnSettings.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.BtnSettings.FlatAppearance.BorderSize = 0;
-            this.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnSettings.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.BtnSettings.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.BtnSettings.Image = global::UI_Design.Properties.Resources.automation_48px;
-            this.BtnSettings.Location = new System.Drawing.Point(0, 520);
-            this.BtnSettings.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnSettings.Name = "BtnSettings";
-            this.BtnSettings.Size = new System.Drawing.Size(218, 65);
-            this.BtnSettings.TabIndex = 8;
-            this.BtnSettings.Text = "> Свойства  ";
-            this.BtnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
-            this.BtnSettings.UseVisualStyleBackColor = true;
-            this.BtnSettings.Click += new System.EventHandler(this.BtnSettings_Click_1);
+            this.btnMinimize.BackgroundImage = global::UI_Design.Properties.Resources.Untitled_5;
+            this.btnMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnMinimize.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btnMinimize.FlatAppearance.BorderSize = 0;
+            this.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnMinimize.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnMinimize.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.btnMinimize.Image = global::UI_Design.Properties.Resources.minimize;
+            this.btnMinimize.Location = new System.Drawing.Point(0, 520);
+            this.btnMinimize.Margin = new System.Windows.Forms.Padding(2);
+            this.btnMinimize.Name = "btnMinimize";
+            this.btnMinimize.Size = new System.Drawing.Size(218, 65);
+            this.btnMinimize.TabIndex = 8;
+            this.btnMinimize.Text = "> Свернуть  ";
+            this.btnMinimize.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnMinimize.UseVisualStyleBackColor = true;
+            this.btnMinimize.Click += new System.EventHandler(this.BtnMinimize_Click_1);
             // 
             // BtnExit
             // 
@@ -335,6 +336,7 @@ namespace UI_Design
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlFormLoader);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -364,7 +366,7 @@ namespace UI_Design
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnAddChild;
         private System.Windows.Forms.Button BtnExit;
-        private System.Windows.Forms.Button BtnSettings;
+        private System.Windows.Forms.Button btnMinimize;
         private System.Windows.Forms.ComboBox cmbBoxNameChild;
         private System.Windows.Forms.Label lblLogo;
         private System.Windows.Forms.ToolTip toolTipMain;

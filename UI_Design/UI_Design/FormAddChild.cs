@@ -19,12 +19,12 @@ namespace UI_Design
         {
             InitializeComponent();
             parent = _parent;
-            StylesService.SetEnabledPropDateTP(dtpBirthday, true);
+            StylesService.SetEnabledPropDateTP(dtpBirthday, true, false);
         }
 
         private void BtnAddChild_Click(object sender, EventArgs e)
         {
-            if(Validation.VerifyAddChild(txtFirstName.Text, txtLastName.Text, cbxGender.Text))
+            if(ValidateService.VerifyAddChild(txtFirstName.Text, txtLastName.Text, cbxGender.Text))
             {
                 ChildRepos.Create(txtFirstName.Text, txtLastName.Text, dtpBirthday.Value, parent, cbxGender.SelectedIndex);//добавляем нового ребенка
                 DialogResult = DialogResult.OK;

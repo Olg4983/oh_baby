@@ -42,6 +42,7 @@ namespace UI_Design
             this.btnLogin = new System.Windows.Forms.Button();
             this.lblLogo = new System.Windows.Forms.Label();
             this.lblRegister = new System.Windows.Forms.Label();
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // txtEmail
@@ -137,6 +138,11 @@ namespace UI_Design
             this.lblRegister.Image = global::UI_Design.Properties.Resources.here_80_2px1;
             this.lblRegister.Name = "lblRegister";
             // 
+            // timer
+            // 
+            this.timer.Interval = 400;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick_1);
+            // 
             // FormLogin
             // 
             resources.ApplyResources(this, "$this");
@@ -176,5 +182,6 @@ namespace UI_Design
         private System.Windows.Forms.ToolTip toolTipLogin;
         private System.Windows.Forms.Button btnVisiblePass;
         private System.Windows.Forms.Label lblLogo;
+        private System.Windows.Forms.Timer timer;
     }
 }

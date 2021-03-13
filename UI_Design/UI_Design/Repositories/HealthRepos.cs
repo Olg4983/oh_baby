@@ -61,5 +61,15 @@ namespace UI_Design
                 db.SaveChanges();
             }
         }
+
+        public static Health GetDate(List<Health> healths)
+        {
+            var i = healths
+                .Where(h => h.DateNextMeeting.Date > DateTime.Now.Date)
+                .OrderBy(h => h.DateNextMeeting.Date)
+                .FirstOrDefault();
+
+            return i;
+        }
     }
 }

@@ -131,9 +131,6 @@
   <data name="txtEmail.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="txtEmail.Text" xml:space="preserve">
-    <value>vvv@vvv.ru</value>
-  </data>
   <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
     <value>txtEmail</value>
   </data>
@@ -160,9 +157,6 @@
   </data>
   <data name="txtPass.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
-  </data>
-  <data name="txtPass.Text" xml:space="preserve">
-    <value>11111111</value>
   </data>
   <data name="&gt;&gt;txtPass.Name" xml:space="preserve">
     <value>txtPass</value>
@@ -492,6 +486,9 @@
   <data name="&gt;&gt;lblRegister.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
+  <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>137, 17</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
@@ -512,6 +509,12 @@
   </data>
   <data name="&gt;&gt;toolTipLogin.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;timer.Name" xml:space="preserve">
+    <value>timer</value>
+  </data>
+  <data name="&gt;&gt;timer.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>FormLogin</value>

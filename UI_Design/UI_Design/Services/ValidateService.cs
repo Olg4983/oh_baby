@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UI_Design
 {
-    class Validation
+    class ValidateService
     {
         public static bool VerifyLogin(string email, string pass)
         {
@@ -130,6 +130,27 @@ namespace UI_Design
             else if (prof == string.Empty)
             {
                 FormMessage.Show("Введите проффесию специалиста!");
+                return false;
+            }
+            else
+                return true;
+        }
+
+        public static bool VerifiyAddDataDiagramm(string month, string growth, string weight)
+        {
+            if (month.Length > 2)
+            {
+                FormMessage.Show("Введите возраст ребенка!");
+                return false;
+            }
+            else if (growth == string.Empty)
+            {
+                FormMessage.Show("Введите рост ребенка!");
+                return false;
+            }
+            else if (weight == string.Empty)
+            {
+                FormMessage.Show("Введите вес ребенка!");
                 return false;
             }
             else

@@ -28,7 +28,7 @@ namespace UI_Design
 
         private void BtnRegister_Click(object sender, EventArgs e)
         {
-            if(Validation.VerifyRegister(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text,txtPassCheck.Text))
+            if(ValidateService.VerifyRegister(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text,txtPassCheck.Text))
             {
                 ParentRepos.Add(txtFirstName.Text, txtLastName.Text, txtEmail.Text, txtPass.Text);
                 DialogResult = DialogResult.OK;

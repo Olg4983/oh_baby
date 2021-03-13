@@ -45,11 +45,11 @@ namespace UI_Design
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
             child = _child;
             parent = _parent;
+
         }
 
         private void FormDocuments_Load(object sender, EventArgs e)
         {
-
         }
 
         private void btnNext_Click(object sender, EventArgs e)
@@ -237,6 +237,11 @@ namespace UI_Design
             {
                 FormMessage.Show("Не удается открыть картинку...");
             }
+        }
+
+        public void Init()
+        {
+            butSv.PerformClick();
         }
     }
 }

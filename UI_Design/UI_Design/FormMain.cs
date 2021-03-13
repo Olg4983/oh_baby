@@ -12,7 +12,7 @@ using System.Data.SqlClient;
 using System.Configuration;
 using System.Runtime.InteropServices;
 using DateSpan = System.Data.Linq.SqlClient.SqlMethods;
-
+using System.Threading;
 
 namespace UI_Design
 {
@@ -45,11 +45,11 @@ namespace UI_Design
             db = new BabyDbContext();
 
 
-            //db.Parents.Load();
-            //db.Childs.Load();
-            //db.Growth_Weights.Load();
-            //db.Images.Load();
-            //db.Healths.Load();
+            db.Parents.Load();
+            db.Childs.Load();
+            db.Growth_Weights.Load();
+            db.Images.Load();
+            db.Healths.Load();
 
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 25, 25));
@@ -94,7 +94,8 @@ namespace UI_Design
 
             FormDocuments formDoc = new FormDocuments(parent, child, this);
             
-            StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "> Документы <");       
+            StylesService.CreateForm(formDoc, pnlFormLoader, lblTitle, "> Документы <");
+            formDoc.Init();
         }
 
         private void BtnMed_Click(object sender, EventArgs e)
@@ -120,13 +121,9 @@ namespace UI_Design
             Application.Exit();
         }
 
-        private void BtnSettings_Click_1(object sender, EventArgs e)
+        private void BtnMinimize_Click_1(object sender, EventArgs e)
         {
-            StylesService.ViewClickButton(sender, pnlNav);
-
-            FormSettings formSettings = new FormSettings();
-            StylesService.CreateForm(formSettings, pnlFormLoader, lblTitle, "> Свойства <");
-
+            this.WindowState = FormWindowState.Minimized;
         }        
 
         private void BtnAddChild_Click(object sender, EventArgs e)

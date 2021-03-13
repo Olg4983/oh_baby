@@ -42,9 +42,9 @@ namespace UI_Design
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.lblLastDoc = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblLastDocTxt = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblWeight = new System.Windows.Forms.Label();
+            this.lblGrowth = new System.Windows.Forms.Label();
+            this.lblAge = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -165,9 +165,9 @@ namespace UI_Design
             this.lblDateHealth.Location = new System.Drawing.Point(107, 64);
             this.lblDateHealth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDateHealth.Name = "lblDateHealth";
-            this.lblDateHealth.Size = new System.Drawing.Size(149, 24);
+            this.lblDateHealth.Size = new System.Drawing.Size(74, 24);
             this.lblDateHealth.TabIndex = 21;
-            this.lblDateHealth.Text = "date soon med";
+            this.lblDateHealth.Text = "дата...";
             // 
             // panel3
             // 
@@ -175,9 +175,9 @@ namespace UI_Design
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.button1);
             this.panel3.Controls.Add(this.lblLastDoc);
-            this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.lblLastDocTxt);
-            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblWeight);
+            this.panel3.Controls.Add(this.lblGrowth);
+            this.panel3.Controls.Add(this.lblAge);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
@@ -225,41 +225,41 @@ namespace UI_Design
             this.lblLastDoc.TabIndex = 18;
             this.lblLastDoc.Text = "Последние замеры:";
             // 
-            // label6
+            // lblWeight
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label6.Location = new System.Drawing.Point(192, 176);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 24);
-            this.label6.TabIndex = 26;
-            this.label6.Text = "вес, кг";
+            this.lblWeight.AutoSize = true;
+            this.lblWeight.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblWeight.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblWeight.Location = new System.Drawing.Point(192, 176);
+            this.lblWeight.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWeight.Name = "lblWeight";
+            this.lblWeight.Size = new System.Drawing.Size(77, 24);
+            this.lblWeight.TabIndex = 26;
+            this.lblWeight.Text = "вес, кг";
             // 
-            // lblLastDocTxt
+            // lblGrowth
             // 
-            this.lblLastDocTxt.AutoSize = true;
-            this.lblLastDocTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblLastDocTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.lblLastDocTxt.Location = new System.Drawing.Point(192, 128);
-            this.lblLastDocTxt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblLastDocTxt.Name = "lblLastDocTxt";
-            this.lblLastDocTxt.Size = new System.Drawing.Size(93, 24);
-            this.lblLastDocTxt.TabIndex = 19;
-            this.lblLastDocTxt.Text = "рост, см";
+            this.lblGrowth.AutoSize = true;
+            this.lblGrowth.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGrowth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblGrowth.Location = new System.Drawing.Point(192, 128);
+            this.lblGrowth.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGrowth.Name = "lblGrowth";
+            this.lblGrowth.Size = new System.Drawing.Size(93, 24);
+            this.lblGrowth.TabIndex = 19;
+            this.lblGrowth.Text = "рост, см";
             // 
-            // label5
+            // lblAge
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
-            this.label5.Location = new System.Drawing.Point(168, 76);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(179, 24);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "возраст, лет/мес";
+            this.lblAge.AutoSize = true;
+            this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblAge.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
+            this.lblAge.Location = new System.Drawing.Point(168, 76);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAge.Name = "lblAge";
+            this.lblAge.Size = new System.Drawing.Size(179, 24);
+            this.lblAge.TabIndex = 25;
+            this.lblAge.Text = "возраст, лет/мес";
             // 
             // label2
             // 
@@ -268,7 +268,7 @@ namespace UI_Design
             this.label2.Location = new System.Drawing.Point(14, 76);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 29);
+            this.label2.Size = new System.Drawing.Size(121, 29);
             this.label2.TabIndex = 22;
             this.label2.Text = "В возрасте ";
             // 
@@ -325,9 +325,9 @@ namespace UI_Design
             this.lblFeast.Location = new System.Drawing.Point(303, 280);
             this.lblFeast.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFeast.Name = "lblFeast";
-            this.lblFeast.Size = new System.Drawing.Size(107, 24);
+            this.lblFeast.Size = new System.Drawing.Size(77, 24);
             this.lblFeast.TabIndex = 50;
-            this.lblFeast.Text = "date event";
+            this.lblFeast.Text = "дней...";
             // 
             // lblGenderText
             // 
@@ -349,9 +349,9 @@ namespace UI_Design
             this.lblBirthday.Location = new System.Drawing.Point(303, 200);
             this.lblBirthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(38, 24);
+            this.lblBirthday.Size = new System.Drawing.Size(74, 24);
             this.lblBirthday.TabIndex = 48;
-            this.lblBirthday.Text = "HB";
+            this.lblBirthday.Text = "дата...";
             // 
             // lblBirthText
             // 
@@ -413,9 +413,9 @@ namespace UI_Design
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label lblLastDoc;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label lblLastDocTxt;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblWeight;
+        private System.Windows.Forms.Label lblGrowth;
+        private System.Windows.Forms.Label lblAge;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;

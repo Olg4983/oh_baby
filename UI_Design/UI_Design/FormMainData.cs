@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using DateSpan = System.Data.Linq.SqlClient.SqlMethods;
-using MoreLinq;
 
 namespace UI_Design
 {
@@ -28,39 +27,64 @@ namespace UI_Design
 
         private void FormMainData_Load(object sender, EventArgs e)
         {
-            if (child != null)
-                ChildShowData();                
-            if(parent != null)
-                lblParentName.Text = $"{parent.FirstName} {parent.LastName}";            
+            try
+            {
+                if (child != null)
+                    ChildShowData();
+                if (parent != null)
+                    lblParentName.Text = $"{parent.FirstName} {parent.LastName}";
+            }
+            catch (Exception)
+            {}          
         }
 
         private void ChildShowData()//вывод данных о ребенке на главную форму
         {
-            lblBirthday.Text = child.Birthday.ToShortDateString();
-            lblGender.Text = GetGender(child.Gender);
+            try
+            {
+                lblBirthday.Text = child.Birthday.ToShortDateString();
+                lblGender.Text = GetGender(child.Gender);
 
-            lblFeast.Text = ShowFeast(child.Birthday).ToString();
+                lblFeast.Text = ShowFeast(child.Birthday).ToString();
 
-            health = HealthRepos.FindByChild(child);
-            //if(health.Count > 0)
-            //lblDateHealth.Text = health[0].DateMeeting.ToShortTimeString().ToString();
-            //date();
-            lblDateHealth.Text = GetDateHealth(health).DateNextMeeting.ToShortDateString().ToString();
+                health = HealthRepos.FindByChild(child);
+            }
+            catch (Exception)
+            { }
+            try
+            {
+                lblDateHealth.Text = HealthRepos.GetDate(health).DateNextMeeting.ToShortDateString().ToString();
+            }
+            catch (Exception)
+            {}
+            try
+            {
+                lblGrowth.Text = GrowthRepos.GetGrowth(child.Id).Growth.ToString() + " см";
+            }
+            catch (Exception)
+            {}
+            try
+            {
+                lblWeight.Text = GrowthRepos.GetWeight(child.Id).Weight.ToString() + " кг";
+            }
+            catch (Exception)
+            { }
+
         }
 
         private string ShowFeast(DateTime feast)//показать праздник
         {
             DateTime dateNow = DateTime.Now;
 
-            //int monthDiff = Math.Abs(DateSpan.DateDiffMonth(dateNow, birthday));
-            int dayDiff = DateSpan.DateDiffDay(dateNow, feast);
-            //int yearDiff = Math.Abs(DateSpan.DateDiffYear(dateNow, birthday));
-            //int minDiff = Math.Abs(DateSpan.DateDiffMinute(dateNow, birthday));
-            //int secDiff = Math.Abs(DateSpan.DateDiffSecond(dateNow, birthday));
-            //int hrsDiff = Math.Abs(DateSpan.DateDiffHour(dateNow, birthday));
-            //int msDiff = Math.Abs(DateSpan.DateDiffMillisecond(dateNow, birthday));
+            int yearDiff = Math.Abs(DateSpan.DateDiffYear(feast, dateNow));
+            int dayDiff = Math.Abs(DateSpan.DateDiffDay(dateNow, feast));
 
-            return (365 + dayDiff).ToString() + " дн.";
+            if (yearDiff > 0)
+            {
+                return ((365 * yearDiff) + 1 - dayDiff).ToString() + " дн.";
+            }
+            else
+                return Math.Abs(((365*yearDiff) - dayDiff)).ToString() + " дн.";
         }
 
         private string GetGender(int gender)//дешифратор пола ребенка
@@ -71,28 +95,6 @@ namespace UI_Design
                 return ($"сын {child.FirstName}");
             else
                 return "нафиг такой пол";
-        }
-
-        private static void date()
-        {
-            var dict = new Dictionary<DateTime, string>()
-            {
-                [new DateTime(2016, 1, 1)] = "прошедший Новый Год",
-                [new DateTime(2016, 12, 31)] = "будущий Новый Год",
-                [new DateTime(2014, 1, 5)] = "давным-давно"
-            };
-            var today = DateTime.Now;
-            var closestValue = dict.MinBy(kvp => (kvp.Key - today).Duration());
-        }
-
-        private static Health GetDateHealth (List<Health> healths)
-        {
-            var i = healths
-                .Where(h => h.DateNextMeeting.Date > DateTime.Now.Date)
-                .OrderBy(h => h.DateNextMeeting.Date)
-                .FirstOrDefault();
-
-            return i;
         }
     }
 }

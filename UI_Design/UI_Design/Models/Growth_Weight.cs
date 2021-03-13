@@ -13,14 +13,12 @@ namespace UI_Design
     {
         [Column(IsPrimaryKey = true, IsDbGenerated = true)]
         public int Id { get; set; }
-        [Required]
-        public int Year { get; set; }
 
         [Required]
-        public int Month { get; set; }
+        public int AgeMonth { get; set; }
         [Required]
         public int Growth { get; set; }
-        
+
         [Required]
         public float Weight { get; set; }
         public int Child_Id { get; set; }

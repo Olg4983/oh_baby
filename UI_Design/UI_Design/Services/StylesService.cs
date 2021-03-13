@@ -17,7 +17,7 @@ namespace UI_Design
             senderPanel.Top = senderBtn.Top;
             senderPanel.Left = senderBtn.Left;
             senderPanel.BringToFront();
-           senderBtn.BackColor = Color.FromArgb(46, 51, 73);
+            senderBtn.BackColor = Color.FromArgb(46, 51, 73);
         }
 
         public static void ViewClickButton(object sender, Panel senderPanel, Label senderLabel, string textLabel)//перемещение панели (выделения) к нажатой кнопке "Главная"
@@ -86,13 +86,18 @@ namespace UI_Design
             senderBtn.Click += new EventHandler(visiblePassTrue);
         }
 
-        public static void SetEnabledPropDateTP(DateTimePicker dtp, bool dateTimeNow)//установка значений по умолчанию для календаря (DateTimePicker)
+        public static void SetEnabledPropDateTP(DateTimePicker dtp, bool dateTimeNow, bool dateTimeWeek)//установка значений по умолчанию для календаря (DateTimePicker)
         {
             if (dateTimeNow)
             {
                 dtp.Value = DateTime.Now;
                 dtp.MaxDate = DateTime.Now;
                 dtp.MinDate = DateTime.Now.AddYears(-20);//минимальная дата раждения ребенка - 20 лет назад
+            }
+            else if(dateTimeWeek)
+            {
+                dtp.Value = DateTime.Now.AddDays(7);
+                dtp.MinDate = DateTime.Now.AddDays(1);
             }
             else
                 dtp.MinDate = DateTime.Now;

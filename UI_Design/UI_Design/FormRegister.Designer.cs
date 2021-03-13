@@ -112,7 +112,6 @@ namespace UI_Design
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(207, 26);
             this.txtFirstName.TabIndex = 18;
-            this.txtFirstName.Text = "Василий";
             // 
             // txtLastName
             // 
@@ -123,7 +122,6 @@ namespace UI_Design
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(207, 26);
             this.txtLastName.TabIndex = 17;
-            this.txtLastName.Text = "Иванов";
             // 
             // txtPassCheck
             // 
@@ -135,7 +133,6 @@ namespace UI_Design
             this.txtPassCheck.PasswordChar = '*';
             this.txtPassCheck.Size = new System.Drawing.Size(207, 26);
             this.txtPassCheck.TabIndex = 16;
-            this.txtPassCheck.Text = "11111111";
             this.toolTipRegister.SetToolTip(this.txtPassCheck, "Повторно введите придуманный пароль");
             // 
             // txtPass
@@ -148,7 +145,6 @@ namespace UI_Design
             this.txtPass.PasswordChar = '*';
             this.txtPass.Size = new System.Drawing.Size(207, 26);
             this.txtPass.TabIndex = 15;
-            this.txtPass.Text = "11111111";
             this.toolTipRegister.SetToolTip(this.txtPass, "Придумайте пароль. Минимальная длина - 8 символов, максимальная - 16");
             // 
             // txtEmail
@@ -160,7 +156,6 @@ namespace UI_Design
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(207, 26);
             this.txtEmail.TabIndex = 14;
-            this.txtEmail.Text = "vvv@vvv.ru";
             this.toolTipRegister.SetToolTip(this.txtEmail, "Введите настоящий email");
             // 
             // toolTipRegister
@@ -180,7 +175,7 @@ namespace UI_Design
             this.btnVisiblePass.Font = new System.Drawing.Font("Nirmala UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisiblePass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnVisiblePass.Location = new System.Drawing.Point(416, 336);
-            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnVisiblePass.Margin = new System.Windows.Forms.Padding(2);
             this.btnVisiblePass.Name = "btnVisiblePass";
             this.btnVisiblePass.Size = new System.Drawing.Size(28, 28);
             this.btnVisiblePass.TabIndex = 24;
@@ -199,7 +194,7 @@ namespace UI_Design
             this.btnRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnRegister.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnRegister.Location = new System.Drawing.Point(9, 474);
-            this.btnRegister.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegister.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(582, 36);
             this.btnRegister.TabIndex = 25;
@@ -218,7 +213,7 @@ namespace UI_Design
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(58)))), ((int)(((byte)(230)))), ((int)(((byte)(202)))));
             this.btnCancel.Location = new System.Drawing.Point(9, 561);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(582, 36);
             this.btnCancel.TabIndex = 2;
